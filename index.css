@@ -45,21 +45,91 @@
 
 */
 
-
 @media (min-width: 800px) {
     header {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: auto;
     }
+
+    header > div {
+        display: grid;
+        grid-template-rows: max-content max-content;
+        grid-auto-columns: auto;
+    }
+
+    .bg-pink > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+
+    #flexbox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #flexbox h2 {
+        font-size: 400%;
+    }
+
+    #flexbox #canvas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-rows: auto 250px 250px 250px 250px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+    }
+
+    #grid > * {
+        padding: 1em;
+    }
+
+    #grid h2 {
+        grid-column: 1 / span 3;
+        text-align: right;
+        font-size: 600%; 
+    }
+
+    #grid p:first-of-type {
+        grid-column: 1 / span 2;
+    }
+
+    #grid div {
+        grid-column: 2 / span 2;
+        grid-row: 3 / span 3;
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: row;
+        padding: 4em;
+        justify-content: space-between;
+    }
+
+    footer div img {
+        order: 1; 
+    }
+
+    footer div p {
+        margin-top: 0; 
+    }
 }
 
+footer div {
+    display: flex;
+    flex-direction: column;
+}
 
-.bg-pink > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2em;
-    font-size: 75%;
+#flexbox #canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #flexbox h2 {
@@ -69,64 +139,3 @@
 #flexbox p {
     font-size: 100%;
 }
-
-#flexbox #canvas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (min-width: 800px) {
-    #flexbox h2 {
-        font-size: 6em;
-    }
-}
-
-
-
-@media (min-width: 800px) {
-    #grid {
-        display: grid;
-        grid-template-rows: auto 250px 250px 250px 250px;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1em;
-    }
-}
-
-#grid > * {
-    padding: 1em;
-}
-
-#grid h2 {
-    grid-column: 1 / span 3;
-    text-align: right;
-
-}
-
-#grid p:first-of-type {
-    grid-column: 1 / span 2;
-}
-
-#grid div {
-    grid-column: 2 / span 2;
-    grid-row: 3 / span 3;
-}
-
-
-footer div {
-    display: flex;
-    flex-direction: column;
-}
-
-@media (min-width: 800px) {
-    footer div {
-        flex-direction: row;
-        padding: 4em;
-        justify-content: space-between;
-    }
-
-}
-
-    footer div img {
-        order: 2; 
-    }
