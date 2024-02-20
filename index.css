@@ -121,11 +121,6 @@
     }
 }
 
-footer div {
-    display: flex;
-    flex-direction: column;
-}
-
 #flexbox #canvas {
     display: flex;
     justify-content: center;
@@ -139,3 +134,9 @@ footer div {
 #flexbox p {
     font-size: 100%;
 }
+
+@media only screen and (max-width: 800px) {
+    footer {
+      text-align: center;
+    }
+  }
